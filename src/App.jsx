@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import "./css/App.css";
 import Password from "./pages/password";
 import Letter from "./pages/Letter";
+
 
 function App() {
     return <Routes>
