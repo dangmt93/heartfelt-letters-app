@@ -34,31 +34,21 @@ a.text-image-trigger::after {
     top: 1.3em;
 }
 
+a.text-image-trigger:hover {
+    cursor: pointer;
+}
+
 #image-container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 9999;
-}
-
-#image-container .closeButton {
-	color: white;
-	font-size: 1.5em;
-	position: absolute;
-	top: 10px;
-	right: 20px;
-	cursor: pointer;
-	z-index: 9999;
-}
-
-#image-container #image {
-	width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
 }
 
 @media only screen and (max-width: 600px) {
@@ -75,3 +65,16 @@ a.text-image-trigger::after {
     }
 }
 
+#image-container .closeButton {
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#image-container #image {
+    width: 100%;
+}

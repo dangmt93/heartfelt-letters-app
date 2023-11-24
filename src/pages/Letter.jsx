@@ -14,6 +14,8 @@ const Letter = () => {
         setShowImage(false);
     };
 
+    // TODO: Separate into 2 receivers, based on sessionStorage
+    // !! If sessionStorage is not set, redirect to main page 
     return (
         <>
             {showImage && (
