@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Password from "./pages/Password";
 import Letter from "./pages/Letter";
-import Test from "./pages/Test";
+// import Test from "./pages/Test";
 
 function App() {
     return (

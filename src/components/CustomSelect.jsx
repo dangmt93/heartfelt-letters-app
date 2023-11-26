@@ -10,12 +10,25 @@ import PropTypes from "prop-types";
  * @param {object} props.selectedItem - The state of the selected item object.
  * Initial value should be an empty string (e.g. const [selectedOption, setSelectedOption] = useState("");)
  * @param {function} props.setSelectedItem - The function to update the selected item.
+ * @param {object} props.uerLabelStyle - User-defined style object for the label; if not defined, default style will be used.
+ * @param {object} props.userIconStyle - User-defined style object for the icon; if not defined, default style will be used.
  * @returns {ReactElement} The rendered CustomSelect component.
  */
-const CustomSelect = ({ dataArray, selectedItem, setSelectedItem }) => {
-    const iconStyle = {
+const CustomSelect = ({
+    dataArray,
+    selectedItem,
+    setSelectedItem,
+    userIconStyle,
+    userLabelStyle,
+}) => {
+    const defaultIconStyle = {
         width: "1.5em",
         marginRight: 10,
+    };
+
+    const defaultLabelStyle = {
+        fontSize: "1.1em",
+        fontFamily: "Arial, sans-serif",
     };
 
     /**
@@ -31,9 +44,11 @@ const CustomSelect = ({ dataArray, selectedItem, setSelectedItem }) => {
                 src={props.data.icon}
                 alt="icon"
                 className="icon"
-                style={iconStyle}
+                style={{ ...defaultIconStyle, ...userIconStyle }}
             />
-            {props.data.label}
+            <span style={{ ...defaultLabelStyle, ...userLabelStyle }}>
+                {props.data.label}
+            </span>
         </components.Option>
     );
 
@@ -57,9 +72,9 @@ const CustomSelect = ({ dataArray, selectedItem, setSelectedItem }) => {
                 src={selectedItem.icon}
                 alt="s-logo"
                 className="selected-logo"
-                style={iconStyle}
+                style={{ ...defaultIconStyle, ...userIconStyle }}
             />
-            {children}
+            <span style={{ ...defaultLabelStyle, ...userLabelStyle }}>{children}</span>
         </components.SingleValue>
     );
 
@@ -95,6 +110,15 @@ CustomSelect.propTypes = {
     dataArray: PropTypes.array, // nullable array
     selectedItem: PropTypes.oneOfType([PropTypes.object, PropTypes.string]), // initial value should be an empty string
     setSelectedItem: PropTypes.func.isRequired,
+    userIconStyle: PropTypes.object,
+    userLabelStyle: PropTypes.object,
+};
+
+CustomSelect.defaultProps = {
+    dataArray: [],
+    selectedItem: "",
+    userIconStyle: {},
+    userLabelStyle: {},
 };
 
 export default CustomSelect;

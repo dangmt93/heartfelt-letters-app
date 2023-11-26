@@ -62,6 +62,17 @@ const Password = () => {
     const [name, setName] = useState(""); // store name input
     const [selectedOption, setSelectedOption] = useState(""); // store selected option object from dropdown
 
+    // Styling for dropdown
+    const dropdownStyle = {
+        labelStyle: {
+            // Style for labels in dropdown menu
+            fontFamily: "Arial, sans-serif",
+        },
+        iconStyle: {
+            // Style for icons in dropdown menu
+        }
+    }
+
     // Handle onChange for inputs
     const handleNameChange = (e) => {
         // Update name state
@@ -96,6 +107,7 @@ const Password = () => {
         return name !== "" && selectedOption !== "";
     };
 
+    // Handle form onSubmit 
     const onSubmit = (e) => {
         e.preventDefault();
         // If correct option is selected
@@ -117,6 +129,7 @@ const Password = () => {
                     </h3>
                     <input
                         type="text"
+                        className="name-input"
                         value={name}
                         onChange={handleNameChange}
                     />
@@ -141,6 +154,8 @@ const Password = () => {
                         dataArray={selectedData?.answerOptions}
                         selectedItem={selectedOption}
                         setSelectedItem={setSelectedOption}
+                        userLabelStyle={dropdownStyle.labelStyle}
+                        userIconStyle={dropdownStyle.iconStyle}
                     />
                 </div>
 
