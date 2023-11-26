@@ -15,9 +15,9 @@ const DATASETS = [
             },
             { value: "Deer", label: "Deer", icon: "./icons/deer.png" },
             {
-                value: "Scorpio Star Sign",
-                label: "Scorpio Star Sign",
-                icon: "./icons/scorpio.png",
+                value: "Pharmacy Symbol",
+                label: "Pharmacy Symbol",
+                icon: "./icons/pharmacy.png",
             },
             {
                 value: "Paint Brush",
@@ -58,9 +58,9 @@ const DATASETS = [
 
 const Password = () => {
     // States
-    const [selectedData, setSelectedData] = useState(null);     // store selected data object from dataset
-    const [name, setName] = useState("");   // store name input
-    const [selectedOption, setSelectedOption] = useState("");   // store selected option object from dropdown
+    const [selectedData, setSelectedData] = useState(null); // store selected data object from dataset
+    const [name, setName] = useState(""); // store name input
+    const [selectedOption, setSelectedOption] = useState(""); // store selected option object from dropdown
 
     // Handle onChange for inputs
     const handleNameChange = (e) => {
@@ -70,7 +70,9 @@ const Password = () => {
 
         // Check in DATASETS and update dataset state
         const dataset = DATASETS.find(
-            (item) => item.inputName === convertVietnameseToEnglish(inputName).toLowerCase()
+            (item) =>
+                item.inputName ===
+                convertVietnameseToEnglish(inputName).toLowerCase()
         );
         if (dataset) {
             setSelectedData(dataset);
@@ -89,20 +91,19 @@ const Password = () => {
         }
     };
 
-    // TODO: Fix showSubmit to show submit button only when name entered + dropdown is selected
+    //  Determine if submit button should be shown
     const showSubmit = () => {
-        // return selectedOption === selectedData?.correctOption;
         return name !== "" && selectedOption !== "";
     };
 
     const onSubmit = (e) => {
         e.preventDefault();
-        if(selectedData.correctOption === selectedOption.label) {
-            console.log("Correct");
-            sessionStorage.setItem('receiver', selectedData.receiver);
-            console.log("Receiver = ", sessionStorage.getItem('receiver'));
+        // If correct option is selected
+        if (selectedData?.correctOption === selectedOption?.label) {
+            sessionStorage.setItem("receiver", selectedData.receiver); // Save `receiver` to session storage
+            window.location.href = "/letter"; // Direct to `letter` page
         } else {
-            console.log("Wrong");
+            alert("Incorrect answer. Please try again.");
         }
     };
 
@@ -125,7 +126,9 @@ const Password = () => {
                     className="form-control"
                     style={{
                         visibility: DATASETS.some(
-                            (item) => item.inputName === convertVietnameseToEnglish(name).toLowerCase()
+                            (item) =>
+                                item.inputName ===
+                                convertVietnameseToEnglish(name).toLowerCase()
                         )
                             ? "visible"
                             : "hidden",
@@ -140,13 +143,21 @@ const Password = () => {
                         setSelectedItem={setSelectedOption}
                     />
                 </div>
-                
-                {showSubmit && <button type="submit">I am sure!</button>}
+
+                <button
+                    type="submit"
+                    style={{ visibility: showSubmit() ? "visible" : "hidden" }}
+                >
+                    I am sure!
+                </button>
             </form>
 
             <img
                 src="./icons/gift.png"
-                style={{ width: "100px" }}
+                style={{
+                    width: "100px",
+                    visibility: showSubmit() ? "visible" : "hidden",
+                }}
                 alt="Gift Icon"
             />
         </div>

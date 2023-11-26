@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-src/utils/test.js
-src/pages/Test.jsx
+# Ignore all test files
+/^test.*|^Test.*/
