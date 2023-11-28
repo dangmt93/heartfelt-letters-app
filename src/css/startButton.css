@@ -1,0 +1,40 @@
+button#startBtn {
+    --color: mediumseagreen;
+    appearance: none;
+    border: none;
+    background: none;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+
+    padding: 0.4em 0.6em;
+    font-size: 2em;
+    background: var(--color);
+    outline-color: var(--color);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0.15em;
+    transition: all 0.3s;
+    outline: var(--color) solid 1px;
+    animation: outline-pulse 1s infinite;
+}
+
+button#startBtn span {
+    font-family: "Operator Mono", monospace;
+}
+
+button#startBtn:hover {
+    --color: #58ce8c;
+}
+
+@keyframes outline-pulse {
+    from,
+    to {
+        outline-offset: 0.3em;
+        outline-width: 0.12em;
+    }
+    50% {
+        outline-offset: 0.16em;
+        outline-width: 0.16em;
+    }
+}

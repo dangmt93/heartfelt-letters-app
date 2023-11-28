@@ -1,0 +1,168 @@
+/* body {
+    background: #2eb5e5;
+} */
+
+/** Chest Opening ------------------------------------------------- */
+
+/** Shining Parchment ----------------------------------------------- */
+#shining-item-container {
+    width: 100dvw;
+    height: 100dvh;
+
+    /* To prevent spinning rays overflowing the outer container */
+    overflow: hidden;
+    position: relative;
+}
+
+.item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background: url("../assets/icons/parchment.png") no-repeat;
+    background-size: 100px 100px;
+    transition: translateY(-30px) 0.5s ease-in-out;
+}
+
+.ray-box {
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    -webkit-animation: ray-animation 20s linear infinite;
+    animation: ray-animation 20s linear infinite;
+}
+.ray {
+    background: -webkit-linear-gradient(
+        top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background: linear-gradient(
+        top,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    margin-left: 10px;
+    border-radius: 80% 80% 0 0;
+    opacity: 0.2; /* Change opacity of sun rays */
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    margin: 15px -10px -10px -5px;
+}
+
+.ray1 {
+    height: 1500px;
+    width: 50px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    top: -175px;
+    left: 15px;
+}
+.ray2 {
+    height: 1000px;
+    width: 8px;
+    -webkit-transform: rotate(220deg);
+    transform: rotate(220deg);
+    top: -670px;
+    left: 175px;
+}
+.ray3 {
+    height: 1500px;
+    width: 50px;
+    -webkit-transform: rotate(250deg);
+    transform: rotate(250deg);
+    top: -750px;
+    left: 100px;
+}
+.ray4 {
+    height: 820px;
+    width: 14px;
+    -webkit-transform: rotate(305deg);
+    transform: rotate(305deg);
+    top: 30px;
+    left: 700px;
+}
+.ray5 {
+    height: 1040px;
+    width: 30px;
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+    top: 60px;
+    left: 180px;
+}
+.ray6 {
+    height: 1290px;
+    width: 50px;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    top: 60px;
+    left: -420px;
+}
+.ray7 {
+    height: 480px;
+    width: 10px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    top: -350px;
+    left: 10px;
+}
+.ray8 {
+    height: 1520px;
+    width: 30px;
+    -webkit-transform: rotate(100deg);
+    transform: rotate(100deg);
+    top: -745px;
+    left: -40px;
+}
+.ray9 {
+    height: 1880px;
+    width: 10px;
+    -webkit-transform: rotate(120deg);
+    transform: rotate(120deg);
+    top: -955px;
+    left: -60px;
+}
+.ray10 {
+    height: 1590px;
+    width: 23px;
+    -webkit-transform: rotate(150deg);
+    transform: rotate(150deg);
+    top: -185px;
+    left: 370px;
+}
+
+@-webkit-keyframes ray-animation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ray-animation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

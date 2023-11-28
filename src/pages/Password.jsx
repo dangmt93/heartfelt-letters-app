@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import CustomSelect from "../components/CustomSelect";
+import StartButton from "../components/StartButton";
+import ChestOpening from "../components/ChestOpening";
 import "../css/password.css";
 import convertVietnameseToEnglish from "../utils/convertVietnameseToEnglish";
 
@@ -61,6 +64,7 @@ const Password = () => {
     const [selectedData, setSelectedData] = useState(null); // store selected data object from dataset
     const [name, setName] = useState(""); // store name input
     const [selectedOption, setSelectedOption] = useState(""); // store selected option object from dropdown
+    const [isPasswordCorrect, setIsPasswordCorrect] = useState(false); // store status if password is correct
 
     // Styling for dropdown
     const dropdownStyle = {
@@ -70,8 +74,8 @@ const Password = () => {
         },
         iconStyle: {
             // Style for icons in dropdown menu
-        }
-    }
+        },
+    };
 
     // Handle onChange for inputs
     const handleNameChange = (e) => {
@@ -107,76 +111,77 @@ const Password = () => {
         return name !== "" && selectedOption !== "";
     };
 
-    // Handle form onSubmit 
+    // Handle form onSubmit
     const onSubmit = (e) => {
         e.preventDefault();
         // If correct option is selected
         if (selectedData?.correctOption === selectedOption?.label) {
             sessionStorage.setItem("receiver", selectedData.receiver); // Save `receiver` to session storage
-            window.location.href = "/letter"; // Direct to `letter` page
+            setIsPasswordCorrect(true);
+            // window.location.href = "/letter"; // Direct to `letter` page
         } else {
             alert("Incorrect answer. Please try again.");
         }
     };
 
-    return (
-        <div id="main-container">
-            <h1>To you...</h1>
-            <form onSubmit={onSubmit}>
-                <div className="form-control">
-                    <h3>
-                        What&apos;s your partner&apos;s Vietnamese first name?
-                    </h3>
-                    <input
-                        type="text"
-                        className="name-input"
-                        value={name}
-                        onChange={handleNameChange}
-                    />
-                </div>
+    if (isPasswordCorrect) {
+        // Chest opening if password is correct ----------------------------
+        return (
+            <Link to="/letter">
+                <ChestOpening />
+            </Link>
+        );
+    } else {
+        // Password form if password is incorrect (initial state) -------------------
+        return (
+            <div id="main-container">
+                <h1>To you...</h1>
+                <form onSubmit={onSubmit}>
+                    <div className="form-control">
+                        <h3>
+                            What&apos;s your partner&apos;s Vietnamese first
+                            name?
+                        </h3>
+                        <input
+                            type="text"
+                            className="name-input"
+                            value={name}
+                            onChange={handleNameChange}
+                        />
+                    </div>
 
-                <div
-                    className="form-control"
-                    style={{
-                        visibility: DATASETS.some(
-                            (item) =>
-                                item.inputName ===
-                                convertVietnameseToEnglish(name).toLowerCase()
-                        )
-                            ? "visible"
-                            : "hidden",
-                    }}
-                >
-                    <h3>
-                        Which of these is engraved on your partner&apos;s ring?
-                    </h3>
-                    <CustomSelect
-                        dataArray={selectedData?.answerOptions}
-                        selectedItem={selectedOption}
-                        setSelectedItem={setSelectedOption}
-                        userLabelStyle={dropdownStyle.labelStyle}
-                        userIconStyle={dropdownStyle.iconStyle}
-                    />
-                </div>
+                    <div
+                        className="form-control"
+                        style={{
+                            visibility: DATASETS.some(
+                                (item) =>
+                                    item.inputName ===
+                                    convertVietnameseToEnglish(
+                                        name
+                                    ).toLowerCase()
+                            )
+                                ? "visible"
+                                : "hidden",
+                        }}
+                    >
+                        <h3>
+                            Which of these is engraved on your partner&apos;s
+                            ring?
+                        </h3>
+                        <CustomSelect
+                            dataArray={selectedData?.answerOptions}
+                            selectedItem={selectedOption}
+                            setSelectedItem={setSelectedOption}
+                            userLabelStyle={dropdownStyle.labelStyle}
+                            userIconStyle={dropdownStyle.iconStyle}
+                        />
+                    </div>
 
-                <button
-                    type="submit"
-                    style={{ visibility: showSubmit() ? "visible" : "hidden" }}
-                >
-                    I am sure!
-                </button>
-            </form>
-
-            <img
-                src="./icons/gift.png"
-                style={{
-                    width: "100px",
-                    visibility: showSubmit() ? "visible" : "hidden",
-                }}
-                alt="Gift Icon"
-            />
-        </div>
-    );
+                    <StartButton text="Start!" isVisible={showSubmit()} />
+                </form>
+            </div>
+        );
+    }
 };
 
 export default Password;
