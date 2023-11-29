@@ -1,0 +1,70 @@
+.backwrap {
+    background: #113243;
+    background-image: url("../assets/background/blue-gradient-background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* Shapes & Animation
+*/
+
+.back-shapes {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.back-shapes img {
+    opacity: 0.2;
+    position: absolute;
+    width: 1.5%;
+}
+
+.floating {
+    position: absolute;
+    -webkit-animation-name: floating;
+    animation-name: floating;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    filter: brightness(0) invert(1);
+
+    &.element {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        opacity: 0.6;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0%) rotate(-55deg);
+    }
+    50% {
+        transform: translateY(300%) rotate(55deg);
+    }
+    100% {
+        transform: translateY(0%) rotate(-55deg);
+    }
+}
+
+@-webkit-keyframes floating {
+    0% {
+        -webkit-transform: translateY(0%);
+    }
+    50% {
+        -webkit-transform: translateY(300%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}

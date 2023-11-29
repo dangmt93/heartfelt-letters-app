@@ -29,6 +29,7 @@ const CustomSelect = ({
     const defaultLabelStyle = {
         fontSize: "1.1em",
         fontFamily: "Arial, sans-serif",
+        color: "black",
     };
 
     /**

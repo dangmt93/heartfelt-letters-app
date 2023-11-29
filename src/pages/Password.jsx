@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import CustomSelect from "../components/CustomSelect";
 import StartButton from "../components/StartButton";
 import ChestOpening from "../components/ChestOpening";
+import BackgroundFloating from "../components/BackgroundFloating";
 import "../css/password.css";
 import convertVietnameseToEnglish from "../utils/convertVietnameseToEnglish";
 
@@ -124,64 +124,63 @@ const Password = () => {
         }
     };
 
-    if (isPasswordCorrect) {
-        // Chest opening if password is correct ----------------------------
-        return (
-            <Link to="/letter">
-                <ChestOpening />
-            </Link>
-        );
-    } else {
-        // Password form if password is incorrect (initial state) -------------------
-        return (
-            <div id="main-container">
-                <h1>To you...</h1>
-                <form onSubmit={onSubmit}>
-                    <div className="form-control">
-                        <h3>
-                            What&apos;s your partner&apos;s Vietnamese first
-                            name?
-                        </h3>
-                        <input
-                            type="text"
-                            className="name-input"
-                            value={name}
-                            onChange={handleNameChange}
-                        />
-                    </div>
+    return (
+        <>
+            <BackgroundFloating />
+            {isPasswordCorrect ? (
+                // If password is correct, show chest opening
+                <ChestOpening toRoute="/letter" />
+            ) : (
+                // If password is incorrect, show form
+                <div id="main-container">
+                    <h1>To you...</h1>
+                    <form onSubmit={onSubmit}>
+                        <div className="form-control">
+                            <h3>
+                                What&apos;s your partner&apos;s Vietnamese first
+                                name?
+                            </h3>
+                            <input
+                                type="text"
+                                className="name-input"
+                                value={name}
+                                onChange={handleNameChange}
+                            />
+                        </div>
 
-                    <div
-                        className="form-control"
-                        style={{
-                            visibility: DATASETS.some(
-                                (item) =>
-                                    item.inputName ===
-                                    convertVietnameseToEnglish(
-                                        name
-                                    ).toLowerCase()
-                            )
-                                ? "visible"
-                                : "hidden",
-                        }}
-                    >
-                        <h3>
-                            Which of these is engraved on your partner&apos;s
-                            ring?
-                        </h3>
-                        <CustomSelect
-                            dataArray={selectedData?.answerOptions}
-                            selectedItem={selectedOption}
-                            setSelectedItem={setSelectedOption}
-                            userLabelStyle={dropdownStyle.labelStyle}
-                            userIconStyle={dropdownStyle.iconStyle}
-                        />
-                    </div>
+                        <div
+                            className="form-control"
+                            style={{
+                                visibility: DATASETS.some(
+                                    (item) =>
+                                        item.inputName ===
+                                        convertVietnameseToEnglish(
+                                            name
+                                        ).toLowerCase()
+                                )
+                                    ? "visible"
+                                    : "hidden",
+                            }}
+                        >
+                            <h3>
+                                Which of these is engraved on your
+                                partner&apos;s ring?
+                            </h3>
+                            <CustomSelect
+                                dataArray={selectedData?.answerOptions}
+                                selectedItem={selectedOption}
+                                setSelectedItem={setSelectedOption}
+                                userLabelStyle={dropdownStyle.labelStyle}
+                                userIconStyle={dropdownStyle.iconStyle}
+                            />
+                        </div>
 
-                    <StartButton text="Start!" isVisible={showSubmit()} />
-                </form>
-            </div>
-        );
-    }
+                        <StartButton text="Start!" isVisible={showSubmit()} />
+                    </form>
+                </div>
+            )}
+        </>
+    );
 };
 
 export default Password;
