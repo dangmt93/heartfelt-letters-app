@@ -31,6 +31,7 @@ import PianoSVG from "../assets/background/floatingItems/piano.svg";
 import PlantSVG from "../assets/background/floatingItems/plant.svg";
 import PrescriptionSVG from "../assets/background/floatingItems/prescription.svg";
 import RenovationSVG from "../assets/background/floatingItems/renovation.svg";
+import RollerSkatingSVG from "../assets/background/floatingItems/roller-skating.svg";
 import ScorpioConstellation from "../assets/background/floatingItems/scorpio-constellation.svg";
 import ScorpioSymbolSVG from "../assets/background/floatingItems/scorpio-symbol.svg";
 import TradingSVG from "../assets/background/floatingItems/trading.svg";
@@ -70,6 +71,7 @@ const svgItems = [
     PlantSVG,
     PrescriptionSVG,
     RenovationSVG,
+    RollerSkatingSVG,
     ScorpioConstellation,
     ScorpioSymbolSVG,
     TradingSVG,
