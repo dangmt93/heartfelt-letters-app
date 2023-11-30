@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../css/DotDotDotAnimation.css";
+import "../css/dotDotDotAnimation.css";
 
 const DotDotDotAnimation = () => {
     const [animationState, setAnimationState] = useState(0);
