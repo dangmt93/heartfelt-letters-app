@@ -9,6 +9,7 @@ import Deer1SVG from "../assets/background/floatingItems/deer1.svg";
 import Deer2SVG from "../assets/background/floatingItems/deer2.svg";
 import Deer3SVG from "../assets/background/floatingItems/deer3.svg";
 import DumbbellSVG from "../assets/background/floatingItems/dumbbell.svg";
+import FrameSVG from "../assets/background/floatingItems/frame.svg";
 import FurbishingSVG from "../assets/background/floatingItems/furbishing.svg";
 import GamepadSVG from "../assets/background/floatingItems/gamepad.svg";
 import GamingConsoleSVG from "../assets/background/floatingItems/gaming-console.svg";
@@ -49,6 +50,7 @@ const svgItems = [
     Deer2SVG,
     Deer3SVG,
     DumbbellSVG,
+    FrameSVG,
     FurbishingSVG,
     GamepadSVG,
     GamingConsoleSVG,

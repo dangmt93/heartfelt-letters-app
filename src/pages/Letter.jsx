@@ -149,15 +149,18 @@ const Letter = () => {
                             it?). Your task, should you decide to play along
                             (and you have no real choice), is to add a touch of
                             absurdity to the special day. On the wedding day,
-                            don a silly hat, dance crazily at 3:14 PM, and wield
-                            your magical glitter pen for &apos;important&apos;
-                            notes. Be cautious; the glitter tends to provoke
-                            unexplained joy.
+                            don a silly hat, dance crazily at 06:05 PM, and
+                            20:10 PM (nothing particularly special about those
+                            time *wink*), and bring the beach vibes to life by
+                            crafting intricate sandcastles during those
+                            &quot;significant&quot; moments. Be cautious;
+                            there&apos;s something magical about those sandy
+                            masterpieces that tends to provoke unexplained joy.
                             <br />
                             <br />
                             As a token of our appreciation, anticipate an
-                            invisible cupcake delivery. Just close your eyes,
-                            visualize the yummiest cupcake, and voila!
+                            invisible cake delivery. Just close your eyes,
+                            visualize the yummiest watermelon cake, and voila!
                             You&apos;re in for a non-existent treat.
                             <br />
                             <br />
