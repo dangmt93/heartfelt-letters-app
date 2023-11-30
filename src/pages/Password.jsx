@@ -1,8 +1,16 @@
 import { useState } from "react";
 import CustomSelect from "../components/CustomSelect";
 import StartButton from "../components/StartButton";
+import DotDotDotAnimation from "../components/DotDotDotAnimation";
 import ChestOpening from "../components/ChestOpening";
 import BackgroundFloating from "../components/BackgroundFloating";
+import CloverIcon from "../assets/icons/dropdown/4-leaf-clover.png";
+import DeerIcon from "../assets/icons/dropdown/deer.png";
+import GamingControllerIcon from "../assets/icons/dropdown/gaming-controller.png";
+import MusicalNoteIcon from "../assets/icons/dropdown/musical-note.png";
+import PaintBrushIcon from "../assets/icons/dropdown/paint-brush.png";
+import PharmacyIcon from "../assets/icons/dropdown/pharmacy.png";
+import ScorpioIcon from "../assets/icons/dropdown/scorpio.png";
 import "../css/password.css";
 import convertVietnameseToEnglish from "../utils/convertVietnameseToEnglish";
 
@@ -14,18 +22,18 @@ const DATASETS = [
             {
                 value: "4-leaf Clover",
                 label: "4-leaf Clover",
-                icon: "./icons/4-leaf-clover.png",
+                icon: CloverIcon,
             },
-            { value: "Deer", label: "Deer", icon: "./icons/deer.png" },
+            { value: "Deer", label: "Deer", icon: DeerIcon },
             {
                 value: "Pharmacy Symbol",
                 label: "Pharmacy Symbol",
-                icon: "./icons/pharmacy.png",
+                icon: PharmacyIcon,
             },
             {
                 value: "Paint Brush",
                 label: "Paint Brush",
-                icon: "./icons/paint-brush.png",
+                icon: PaintBrushIcon,
             },
         ],
         correctOption: "4-leaf Clover",
@@ -37,22 +45,22 @@ const DATASETS = [
             {
                 value: "Scorpio Star Sign",
                 label: "Scorpio Star Sign",
-                icon: "./icons/scorpio.png",
+                icon: ScorpioIcon,
             },
             {
                 value: "4-leaf Clover",
                 label: "4-leaf Clover",
-                icon: "./icons/4-leaf-clover.png",
+                icon: CloverIcon,
             },
             {
                 value: "Music Note",
                 label: "Music Note",
-                icon: "./icons/musical-note.png",
+                icon: MusicalNoteIcon,
             },
             {
                 value: "Gaming Controller",
                 label: "Gaming Controller",
-                icon: "./icons/gaming-controller.png",
+                icon: GamingControllerIcon,
             },
         ],
         correctOption: "Scorpio Star Sign",
@@ -118,9 +126,10 @@ const Password = () => {
         if (selectedData?.correctOption === selectedOption?.label) {
             sessionStorage.setItem("receiver", selectedData.receiver); // Save `receiver` to session storage
             setIsPasswordCorrect(true);
-            // window.location.href = "/letter"; // Direct to `letter` page
         } else {
-            alert("Incorrect answer. Please try again.");
+            // If incorrect option is selected, direct to "fake" letter for imposters
+            sessionStorage.setItem("receiver", "imposter"); // Save `receiver` as "imposter"
+            window.location.href = "/letter"; // Direct to `letter` page
         }
     };
 
@@ -133,7 +142,8 @@ const Password = () => {
             ) : (
                 // If password is incorrect, show form
                 <div id="main-container">
-                    <h1>To you...</h1>
+                    <h1 id="title">To you<DotDotDotAnimation /></h1>
+                    
                     <form onSubmit={onSubmit}>
                         <div className="form-control">
                             <h3>
@@ -174,8 +184,9 @@ const Password = () => {
                                 userIconStyle={dropdownStyle.iconStyle}
                             />
                         </div>
-
-                        <StartButton text="Start!" isVisible={showSubmit()} />
+                        
+                        <br />
+                        <StartButton text="▶▶" isVisible={showSubmit()} />
                     </form>
                 </div>
             )}

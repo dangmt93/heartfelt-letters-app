@@ -1,5 +1,5 @@
 button#startBtn {
-    --color: mediumseagreen;
+    --color: rgb(60, 145, 179);
     appearance: none;
     border: none;
     background: none;
@@ -21,10 +21,6 @@ button#startBtn {
 
 button#startBtn span {
     font-family: "Operator Mono", monospace;
-}
-
-button#startBtn:hover {
-    --color: #58ce8c;
 }
 
 @keyframes outline-pulse {

@@ -7,6 +7,7 @@ import CloverSVG from "../assets/background/floatingItems/clover.svg";
 import CookingSVG from "../assets/background/floatingItems/cooking.svg";
 import Deer1SVG from "../assets/background/floatingItems/deer1.svg";
 import Deer2SVG from "../assets/background/floatingItems/deer2.svg";
+import Deer3SVG from "../assets/background/floatingItems/deer3.svg";
 import DumbbellSVG from "../assets/background/floatingItems/dumbbell.svg";
 import FurbishingSVG from "../assets/background/floatingItems/furbishing.svg";
 import GamepadSVG from "../assets/background/floatingItems/gamepad.svg";
@@ -29,9 +30,11 @@ import PaintingSVG from "../assets/background/floatingItems/painting.svg";
 import PianoSVG from "../assets/background/floatingItems/piano.svg";
 import PlantSVG from "../assets/background/floatingItems/plant.svg";
 import PrescriptionSVG from "../assets/background/floatingItems/prescription.svg";
+import RenovationSVG from "../assets/background/floatingItems/renovation.svg";
 import ScorpioConstellation from "../assets/background/floatingItems/scorpio-constellation.svg";
 import ScorpioSymbolSVG from "../assets/background/floatingItems/scorpio-symbol.svg";
 import TradingSVG from "../assets/background/floatingItems/trading.svg";
+import VaseSVG from "../assets/background/floatingItems/vase.svg";
 import VideoPlayerSVG from "../assets/background/floatingItems/video-player.svg";
 
 // Array of SVG items
@@ -43,6 +46,7 @@ const svgItems = [
     CookingSVG,
     Deer1SVG,
     Deer2SVG,
+    Deer3SVG,
     DumbbellSVG,
     FurbishingSVG,
     GamepadSVG,
@@ -65,9 +69,11 @@ const svgItems = [
     PianoSVG,
     PlantSVG,
     PrescriptionSVG,
+    RenovationSVG,
     ScorpioConstellation,
     ScorpioSymbolSVG,
     TradingSVG,
+    VaseSVG,
     VideoPlayerSVG,
 ];
 

@@ -1,5 +1,11 @@
 import { useState } from "react";
 import "../css/letter.css";
+import BugsBunnyNoImage from "../assets/images/memes/bugs-bunny-no.png";
+import DrinkingInYour30sImage from "../assets/images/memes/drinking-in-your-30s.jpg";
+import PermissionToPlayImage from "../assets/images/memes/permission-to-play.jpg";
+import ThisIsFineImage from "../assets/images/memes/this-is-fine.jpg";
+import WrongChoiceImage from "../assets/images/memes/wrong-choice.png";
+import YouShallNotPassImage from "../assets/images/memes/you-shall-not-pass.png";
 
 const Letter = () => {
     const [image, setImage] = useState("");
@@ -59,7 +65,7 @@ const Letter = () => {
                             cupiditate quis, reiciendis est perspiciatis? et
                             illum, officia inventore veniam explicabo{" "}
                             <a
-                                className="text-image-trigger"
+                                className="text-image-trigger important-note"
                                 onClick={() =>
                                     handleTextTriggerOnClick(
                                         "/images/drinking-in-your-30s.jpg"
@@ -100,7 +106,7 @@ const Letter = () => {
                             cupiditate quis, reiciendis est perspiciatis?
                             explicabo{" "}
                             <a
-                                className="text-image-trigger"
+                                className="text-image-trigger important-note"
                                 onClick={() =>
                                     handleTextTriggerOnClick(
                                         "/images/drinking-in-your-30s.jpg"
@@ -113,6 +119,84 @@ const Letter = () => {
                         </>
                     )}
                     {/* ----------------- End of Letter for Mai ----------------------------- */}
+
+                    {/* --------------- Letter for Imposters [FAKE LETTER] -------------------- */}
+                    {sessionStorage.getItem("receiver") === "imposter" && (
+                        <>
+                            Dear my friend,
+                            <br />
+                            <br />
+                            Welcome to Operation Chuckleception, where reality
+                            blends with hilarity! You may be scratching your
+                            head, wondering why you received this mysterious
+                            message. Well, brace yourself, because you&apos;ve
+                            been unknowingly recruited into the whimsical world
+                            of the Secret Society of Silly Surprises. Yes, you{" "}
+                            <a
+                                className="text-image-trigger"
+                                onClick={() =>
+                                    handleTextTriggerOnClick(BugsBunnyNoImage)
+                                }
+                            >
+                                definitely
+                            </a>{" "}
+                            read that right - or maybe not, depending on your
+                            sense of humor.
+                            <br />
+                            <br />
+                            Your undercover moniker is &quot;Captain
+                            Gigglesnort&quot; (quite the giveaway, isn&apos;t
+                            it?). Your task, should you decide to play along
+                            (and you have no real choice), is to add a touch of
+                            absurdity to the special day. On the wedding day,
+                            don a silly hat, dance crazily at 3:14 PM, and wield
+                            your magical glitter pen for &apos;important&apos;
+                            notes. Be cautious; the glitter tends to provoke
+                            unexplained joy.
+                            <br />
+                            <br />
+                            As a token of our appreciation, anticipate an
+                            invisible cupcake delivery. Just close your eyes,
+                            visualize the yummiest cupcake, and voila!
+                            You&apos;re in for a non-existent treat.
+                            <br />
+                            <br />
+                            Now, here&apos;s the kicker - this entire letter is
+                            the {"  "}
+                            <a
+                                className="text-image-trigger"
+                                onClick={() =>
+                                    handleTextTriggerOnClick(WrongChoiceImage)
+                                }
+                            >
+                                real
+                            </a>{" "}
+                            joke. Yes, Captain Gigglesnort, you&apos;ve just
+                            received the fake letter. Confused? That&apos;s the
+                            point! If you&apos;re scratching your head,
+                            wondering, &quot;
+                            {""}
+                            <a
+                                className="text-image-trigger"
+                                onClick={() =>
+                                    handleTextTriggerOnClick(
+                                        YouShallNotPassImage
+                                    )
+                                }
+                            >
+                                No!
+                            </a>{" "}
+                            What just happened?&quot; - congratulations, Captain
+                            Gigglesnort, you&apos;re in on the joke. If
+                            confusion ensues, mission accomplished!
+                            <br />
+                            <br />
+                            Wishing you chuckles and confounded expressions,
+                            <br />
+                            The Chief Chuckle Connoisseur (or not)
+                        </>
+                    )}
+                    {/* ----------------- End of FAKE LETTER ----------------------------- */}
                 </div>
             </div>
         </>
