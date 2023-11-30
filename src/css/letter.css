@@ -11,17 +11,19 @@
 }
 
 @keyframes boldAnimation {
-    from {
-        font-weight: 400;
+    0% {
+        text-shadow: none;
     }
-    to {
-        font-weight: 900;
+    50% {
+        text-shadow: 0.5px 0.4px; /* Adjust the desired text shadow */
+    }
+    100% {
+        text-shadow: none;
     }
 }
 
 a.text-image-trigger {
     text-decoration: underline;
-    font-weight: 600;
     position: relative;
     animation: boldAnimation linear 3s infinite;
 }

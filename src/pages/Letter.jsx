@@ -3,9 +3,10 @@ import "../css/letter.css";
 import BugsBunnyNoImage from "../assets/images/memes/bugs-bunny-no.png";
 import DrinkingInYour30sImage from "../assets/images/memes/drinking-in-your-30s.jpg";
 import PermissionToPlayImage from "../assets/images/memes/permission-to-play.jpg";
-import ThisIsFineImage from "../assets/images/memes/this-is-fine.jpg";
+import ThisIsFineGIF from "../assets/images/memes/this-is-fine.gif";
 import WrongChoiceImage from "../assets/images/memes/wrong-choice.png";
-import YouShallNotPassImage from "../assets/images/memes/you-shall-not-pass.png";
+import YouShallNotPassGIF from "../assets/images/memes/you-shall-not-pass.gif";
+import ItsAboutTimeGIF from "../assets/images/memes/its-about-time.gif";
 
 const Letter = () => {
     const [image, setImage] = useState("");
@@ -67,9 +68,7 @@ const Letter = () => {
                             <a
                                 className="text-image-trigger important-note"
                                 onClick={() =>
-                                    handleTextTriggerOnClick(
-                                        "/images/drinking-in-your-30s.jpg"
-                                    )
+                                    handleTextTriggerOnClick(ItsAboutTimeGIF)
                                 }
                             >
                                 &quot;okay&quot;
@@ -183,7 +182,7 @@ const Letter = () => {
                                 className="text-image-trigger"
                                 onClick={() =>
                                     handleTextTriggerOnClick(
-                                        YouShallNotPassImage
+                                        YouShallNotPassGIF
                                     )
                                 }
                             >
