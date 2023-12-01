@@ -40,6 +40,28 @@ a.text-image-trigger:hover {
     cursor: pointer;
 }
 
+span.vietnamese-text {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 0.82em;
+}
+
+span.signature {
+    font-size: 2em;
+    font-family: "Allura", cursive;
+}
+
+a.song-link {
+    color: black;
+    text-decoration: underline;
+}
+
+span.back-button {
+    border: 1px solid #333;
+    padding: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 #image-container {
     position: fixed;
     top: 0;
