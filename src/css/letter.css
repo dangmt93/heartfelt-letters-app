@@ -43,6 +43,7 @@ a.text-image-trigger:hover {
 span.vietnamese-text {
     font-family: "Be Vietnam Pro", sans-serif;
     font-size: 0.82em;
+    font-style: italic;
 }
 
 span.signature {
@@ -72,7 +73,7 @@ span.back-button {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
+    z-index: 9998;
 }
 
 @media only screen and (max-width: 600px) {

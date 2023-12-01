@@ -87,7 +87,7 @@ const Letter = () => {
                             what did you do in response? You threw yourself into
                             an intense regimen of day-and-night study, literally
                             pausing only for meals. Also, I must admit, putting
-                            down only 1 university in your application was the
+                            down only one university in your application was the
                             most audacious and gigachad move I have ever seen.
                             And lo and behold, you finally made it and won the
                             girl&apos;s heart, yada yada - a typical protagonist
@@ -110,7 +110,7 @@ const Letter = () => {
                             maintain the magic in your relationship. I can see
                             that you truly care for her in every way. From being
                             really concerned for her safety with her reckless
-                            and fast driving during our one-in-a-lifetime (not
+                            and fast driving during our once-in-a-lifetime (not
                             again, please!) bikepacking adventure in Ha Giang,
                             to small details such as asking Michelle to look
                             after her before our departure for Tasmania - you
@@ -147,13 +147,10 @@ const Letter = () => {
                             sessions with the boys continues!
                             <br />
                             <br />
-                            Glad to call you my &quot;brother-in-law&quot;,
-                            <br />
-                            <span className="signature">T.D.</span>
-                            <br />
-                            <br />
-                            P.S. Just a gentle reminder: even though it&apos;s
-                            your night, go easy on the partying, because {"  "}
+                            Remember, this is your night - enjoy every moment.
+                            Just a gentle reminder: even though it&apos;s
+                            once-in-a-lifetime occassion, go easy on the
+                            partying, because {"  "}
                             <a
                                 className="text-image-trigger"
                                 onClick={() =>
@@ -165,6 +162,23 @@ const Letter = () => {
                                 you know
                             </a>
                             {""}.
+                            <br />
+                            <br />
+                            Glad to call you my &quot;brother-in-law&quot;,
+                            <br />
+                            <span className="signature">T.D.</span>
+                            <br />
+                            <br />
+                            P.S. Here&apos;s{"  "}
+                            <a
+                                href="https://www.youtube.com/watch?v=IsGk5vej7mw&ab_channel=westlifeVEVO"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="song-link"
+                            >
+                                a song that I think would be perfect for both of
+                                you
+                            </a>
                             <br />
                             Another P.S. Remember the journey in the city of
                             Yendys, hence the name of this app.
@@ -363,7 +377,7 @@ const Letter = () => {
                             absurdity to the special day. On the wedding day,
                             don a silly hat, dance crazily at 06:05 PM, and
                             20:10 PM (nothing particularly special about those
-                            time *wink*), and bring the beach vibes to life by
+                            times *wink*), and bring the beach vibes to life by
                             crafting intricate sandcastles during those
                             &quot;significant&quot; moments. Be cautious;
                             there&apos;s something magical about those sandy
