@@ -44,38 +44,130 @@ const Letter = () => {
                     {/* --------------------- Letter for Kain -------------------------------- */}
                     {sessionStorage.getItem("receiver") === "quan" && (
                         <>
-                            Dear my bro,
+                            Dear soon-to-be brother-in-law,
                             <br />
                             <br />
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Consequatur ratione maiores nihil aspernatur
-                            delectus ipsum aperiam quae dolor reiciendis dolorum
-                            sit, debitis quam totam deserunt perspiciatis,
-                            temporibus ea dolorem. Veritatis, officiis?
-                            Repudiandae eum obcaecati fuga qui nisi quod
-                            possimus, debitis alias. Culpa nesciunt distinctio
-                            optio reprehenderit rem blanditiis aperiam animi,
-                            suscipit aliquid deserunt. Earum voluptatum quia,
-                            porro veritatis unde autem quibusdam, natus ipsum
-                            iste excepturi minima tempore temporibus molestias
-                            sunt sapiente commodi perspiciatis, exercitationem
-                            asperiores. Fugit quam optio quia amet excepturi
-                            mollitia explicabo eum minus nulla nihil ullam
-                            atque, dignissimos illo. Reiciendis est sit
-                            inventore! Repellat, et quibusdam? Assumenda
-                            doloribus enim distinctio consequatur pariatur
-                            facilis ducimus labore voluptates laborum nihil hic
-                            cupiditate quis, reiciendis est perspiciatis? et
-                            illum, officia inventore veniam explicabo{" "}
+                            It&apos;s unfortunate that I&apos;m unable to be
+                            physically present to witness the joyous occasion of
+                            your wedding. Life&apos;s twists and turns have led
+                            me elsewhere, so to make up for my absence,
+                            I&apos;ve sent this digital missive along with this
+                            little app as my wedding gift.
+                            <br />
+                            <br />
+                            As I sit down to write this letter, I can&apos;t
+                            help but reflect on the remarkable journey that you
+                            and Mai have undertaken together. From the early
+                            days of a long-distance relationship that endured
+                            for a remarkable 8 years (if my calculations are
+                            correct), to the present moment, where you&apos;re
+                            standing on the brink of matrimony, it&apos;s been
+                            quite the rollercoaster - and a darn entertaining
+                            one at that. More than 13 years in total, huh? Wow,
+                            that&apos;s a long journey. I still remember you
+                            telling me about your love story and your grand
+                            quest to win Mai&apos;s heart. Your pursuit of her
+                            is the stuff of legends, man. From the moment you
+                            decided to chase after her, your determination was
+                            as clear as day. I&apos;ve never witnessed someone
+                            so set on winning the heart of their crush. I mean,
+                            even when she was playing hard to get when you asked
+                            her out during high school, the lengths you went to
+                            prove yourself were truly commendable. You even put
+                            the line &quot;
+                            <span className="vietnamese-text">
+                                Talk to chị Ngân tomorrow
+                            </span>
+                            &quot; in your notebook to remind yourself daily of
+                            that crucial task. Not to mention your sheer
+                            determination and decisiveness to secure admission
+                            into the Foreign Trade University, just because Mai
+                            had set the condition that she wouldn&apos;t accept
+                            you if this achievement wasn&apos;t realised. So,
+                            what did you do in response? You threw yourself into
+                            an intense regimen of day-and-night study, literally
+                            pausing only for meals. Also, I must admit, putting
+                            down only 1 university in your application was the
+                            most audacious and gigachad move I have ever seen.
+                            And lo and behold, you finally made it and won the
+                            girl&apos;s heart, yada yada - a typical protagonist
+                            plot right there.
+                            <br />
+                            <br />
+                            Your commitment didn&apos;t stop there. The
+                            surprises, the thoughtful gestures, the
+                            transformation from a workaholic to a devoted
+                            partner - once again, it&apos;s like witnessing a
+                            character arc in an anime. Your efforts to adapt, to
+                            change for the sake of love, and to bring happiness
+                            to Mai&apos;s life really show the depth of your
+                            commitment. You always make sure to prepare
+                            something to surprise her on her birthdays. I still
+                            remember even when we had just moved to Tasmania,
+                            you went out of your way to learn a song, play it on
+                            the piano, and sing to her over the phone. It&apos;s
+                            moments like these that really showcase how you
+                            maintain the magic in your relationship. I can see
+                            that you truly care for her in every way. From being
+                            really concerned for her safety with her reckless
+                            and fast driving during our one-in-a-lifetime (not
+                            again, please!) bikepacking adventure in Ha Giang,
+                            to small details such as asking Michelle to look
+                            after her before our departure for Tasmania - you
+                            are the most attentive and best partner that Mai
+                            could ever ask for.
+                            <br />
+                            <br />
+                            So yeah, you are doing an excellent job, so keep up
+                            the great work. I&apos;m really glad to have you{" "}
                             <a
-                                className="text-image-trigger important-note"
+                                className="text-image-trigger"
                                 onClick={() =>
                                     handleTextTriggerOnClick(ItsAboutTimeGIF)
                                 }
                             >
-                                &quot;okay&quot;
-                            </a>{" "}
-                            ut facilis.
+                                finally
+                            </a>
+                            {""} become a part of our family, and I look forward
+                            to savouring more of the good food you cook - even
+                            though I may not say it often, I genuinely
+                            appreciate your culinary skills. And, of course,
+                            let&apos;s{" "}
+                            <a
+                                className="text-image-trigger"
+                                onClick={() =>
+                                    handleTextTriggerOnClick(
+                                        PermissionToPlayImage
+                                    )
+                                }
+                            >
+                                hope
+                            </a>
+                            {""} that our tradition of late-night gaming
+                            sessions with the boys continues!
+                            <br />
+                            <br />
+                            Glad to call you my &quot;brother-in-law&quot;,
+                            <br />
+                            <span className="signature">T.D.</span>
+                            <br />
+                            <br />
+                            P.S. Just a gentle reminder: even though it&apos;s
+                            your night, go easy on the partying, because {"  "}
+                            <a
+                                className="text-image-trigger"
+                                onClick={() =>
+                                    handleTextTriggerOnClick(
+                                        DrinkingInYour30sImage
+                                    )
+                                }
+                            >
+                                you know
+                            </a>
+                            {""}.
+                            <br />
+                            Another P.S. Remember the journey in the city of
+                            Yendys, hence the name of this app.
                         </>
                     )}
                     {/* ----------------- End of Letter for Kain ----------------------------- */}
@@ -103,7 +195,7 @@ const Letter = () => {
                             night when you sneakily went outside to meet him,
                             and I tagged along), I sensed that he would become
                             an integral part of your story (maybe not; I was
-                            only 11 years old). But as the time went on, I could
+                            only 11 years old). But as time went on, I could
                             tell for sure that he is the one for you.
                             <br />
                             <br />
@@ -138,8 +230,9 @@ const Letter = () => {
                                 Talk to chị Ngân tomorrow
                             </span>
                             &quot; highlighted, underlined, starred, and circled
-                            (or maybe just highlighted). That&apos;s some KDrama
-                            shit right there if I&apos;ve ever seen one.
+                            (or maybe just highlighted) since the moment he saw
+                            you in high school. That&apos;s some KDrama shit
+                            right there if I&apos;ve ever seen one.
                             <br />
                             <br />
                             Thinking about you with anyone else is inconceivable
@@ -171,7 +264,7 @@ const Letter = () => {
                             comes to connecting with people, your charm is
                             undeniable - or perhaps they&apos;re simply
                             terrified of your bossing demeanour. No wonder so
-                            many of your friends are willing to quit their job
+                            many of your friends are willing to quit their jobs
                             just to attend your wedding.
                             <br />
                             <br />
@@ -189,7 +282,7 @@ const Letter = () => {
                             other moments that have led to this day. Consider
                             this small app my wedding gift to you. Hope you have
                             the best wedding ever, and that everything goes
-                            according to what you had spent the past year
+                            according to what you have spent the past year
                             planning. Don&apos;t you worry about the house,
                             everything is{"  "}
                             <a
@@ -233,7 +326,7 @@ const Letter = () => {
                                 you
                             </a>
                             <br />
-                            Another P.S. Remember the journey in the city of
+                            Another P.S. Remember the adventure in the city of
                             Yendys, hence the name of this app.
                         </>
                     )}
