@@ -152,7 +152,7 @@ const Letter = () => {
                             once-in-a-lifetime occassion, go easy on the
                             partying, because {"  "}
                             <a
-                                className="text-image-trigger"
+                                className="text-image-trigger important-note"
                                 onClick={() =>
                                     handleTextTriggerOnClick(
                                         DrinkingInYour30sImage
@@ -311,7 +311,7 @@ const Letter = () => {
                             moment. Oh, and keep an eye on Kain; we don&apos;t
                             want him partying too hard, {"  "}
                             <a
-                                className="text-image-trigger"
+                                className="text-image-trigger important-note"
                                 onClick={() =>
                                     handleTextTriggerOnClick(
                                         DrinkingInYour30sImage
