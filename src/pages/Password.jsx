@@ -4,68 +4,8 @@ import StartButton from "../components/StartButton";
 import DotDotDotAnimation from "../components/DotDotDotAnimation";
 import ChestOpening from "../components/ChestOpening";
 import BackgroundFloating from "../components/BackgroundFloating";
-import CloverIcon from "../assets/icons/dropdown/4-leaf-clover.png";
-import DeerIcon from "../assets/icons/dropdown/deer.png";
-import GamingControllerIcon from "../assets/icons/dropdown/gaming-controller.png";
-import MusicalNoteIcon from "../assets/icons/dropdown/musical-note.png";
-import PaintBrushIcon from "../assets/icons/dropdown/paint-brush.png";
-import PharmacyIcon from "../assets/icons/dropdown/pharmacy.png";
-import ScorpioIcon from "../assets/icons/dropdown/scorpio.png";
+import { QUESTIONS, DATASETS } from "../data/data";
 import "../css/password.css";
-import convertVietnameseToEnglish from "../utils/convertVietnameseToEnglish";
-
-const DATASETS = [
-    {
-        inputName: "ngan",
-        receiver: "quan",
-        answerOptions: [
-            {
-                value: "4-leaf Clover",
-                label: "4-leaf Clover",
-                icon: CloverIcon,
-            },
-            { value: "Deer", label: "Deer", icon: DeerIcon },
-            {
-                value: "Pharmacy Symbol",
-                label: "Pharmacy Symbol",
-                icon: PharmacyIcon,
-            },
-            {
-                value: "Paint Brush",
-                label: "Paint Brush",
-                icon: PaintBrushIcon,
-            },
-        ],
-        correctOption: "4-leaf Clover",
-    },
-    {
-        inputName: "quan",
-        receiver: "ngan",
-        answerOptions: [
-            {
-                value: "Scorpio Star Sign",
-                label: "Scorpio Star Sign",
-                icon: ScorpioIcon,
-            },
-            {
-                value: "4-leaf Clover",
-                label: "4-leaf Clover",
-                icon: CloverIcon,
-            },
-            {
-                value: "Music Note",
-                label: "Music Note",
-                icon: MusicalNoteIcon,
-            },
-            {
-                value: "Gaming Controller",
-                label: "Gaming Controller",
-                icon: GamingControllerIcon,
-            },
-        ],
-        correctOption: "Scorpio Star Sign",
-    },
-];
 
 const Password = () => {
     // States
@@ -93,9 +33,7 @@ const Password = () => {
 
         // Check in DATASETS and update dataset state
         const dataset = DATASETS.find(
-            (item) =>
-                item.inputName ===
-                convertVietnameseToEnglish(inputName).toLowerCase()
+            (item) => item.inputName === inputName.toLowerCase()
         );
         if (dataset) {
             setSelectedData(dataset);
@@ -142,14 +80,14 @@ const Password = () => {
             ) : (
                 // If password is incorrect, show form
                 <div id="main-container">
-                    <h1 id="title">To you<DotDotDotAnimation /></h1>
-                    
+                    <h1 id="title">
+                        To you
+                        <DotDotDotAnimation />
+                    </h1>
+
                     <form onSubmit={onSubmit}>
                         <div className="form-control">
-                            <h3>
-                                What&apos;s your partner&apos;s Vietnamese first
-                                name?
-                            </h3>
+                            <h3>{QUESTIONS[0]}</h3>
                             <input
                                 type="text"
                                 className="name-input"
@@ -163,19 +101,15 @@ const Password = () => {
                             style={{
                                 visibility: DATASETS.some(
                                     (item) =>
-                                        item.inputName ===
-                                        convertVietnameseToEnglish(
-                                            name
-                                        ).toLowerCase()
+                                        item.inputName === name.toLowerCase()
                                 )
                                     ? "visible"
                                     : "hidden",
                             }}
                         >
-                            <h3>
-                                Which of these is engraved on your
-                                partner&apos;s ring?
-                            </h3>
+                            <h3>{QUESTIONS[1]}</h3>- correct answer ={" "}
+                            {selectedData?.correctOption} (removed when
+                            deployed)
                             <CustomSelect
                                 dataArray={selectedData?.answerOptions}
                                 selectedItem={selectedOption}
@@ -184,7 +118,6 @@ const Password = () => {
                                 userIconStyle={dropdownStyle.iconStyle}
                             />
                         </div>
-                        
                         <br />
                         <StartButton text="▶▶" isVisible={showSubmit()} />
                     </form>

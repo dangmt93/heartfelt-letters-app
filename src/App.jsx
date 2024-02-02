@@ -8,7 +8,6 @@ function App() {
         <Routes>
             <Route path="/" element={<Password />} />
             <Route path="/letter" element={<Letter />} />
-            {/* <Route path="/test" element={<Test />} /> */}
         </Routes>
     );
 }

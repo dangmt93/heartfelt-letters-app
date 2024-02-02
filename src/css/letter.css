@@ -28,16 +28,22 @@ a.text-image-trigger {
     animation: boldAnimation linear 3s infinite;
 }
 
-a.important-note::after {
+a.text-image-trigger:hover {
+    cursor: pointer;
+}
+
+.important-note {
+    display: inline-block;
+    position: relative;
+    text-decoration: underline;
+}
+
+.important-note::after {
     content: url("../assets/icons/curly-arrow-28.png");
     width: 200px;
     position: absolute;
     left: 1.5em;
     top: 1.3em;
-}
-
-a.text-image-trigger:hover {
-    cursor: pointer;
 }
 
 span.vietnamese-text {
