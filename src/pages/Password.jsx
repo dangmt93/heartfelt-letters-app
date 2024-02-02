@@ -2,7 +2,7 @@ import { useState } from "react";
 import CustomSelect from "../components/CustomSelect";
 import StartButton from "../components/StartButton";
 import DotDotDotAnimation from "../components/DotDotDotAnimation";
-import ChestOpening from "../components/ChestOpening";
+import ShiningScroll from "../components/ShiningScroll";
 import BackgroundFloating from "../components/BackgroundFloating";
 import { QUESTIONS, DATASETS } from "../data/data";
 import "../css/password.css";
@@ -76,7 +76,7 @@ const Password = () => {
             <BackgroundFloating />
             {isPasswordCorrect ? (
                 // If password is correct, show chest opening
-                <ChestOpening toRoute="/letter" />
+                <ShiningScroll toRoute="/letter" />
             ) : (
                 // If password is incorrect, show form
                 <div id="main-container">

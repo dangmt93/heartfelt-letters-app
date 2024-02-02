@@ -9,11 +9,9 @@ import ScorpioIcon from "../assets/icons/dropdown/scorpio.png";
 import BugsBunnyNoImage from "../assets/images/memes/bugs-bunny-no.png";
 import DrinkingInYour30sImage from "../assets/images/memes/drinking-in-your-30s.jpg";
 import PermissionToPlayImage from "../assets/images/memes/permission-to-play.jpg";
-import ThisIsFineGIF from "../assets/images/memes/this-is-fine.gif";
 import WrongChoiceImage from "../assets/images/memes/wrong-choice.png";
 import YouShallNotPassGIF from "../assets/images/memes/you-shall-not-pass.gif";
 import ItsAboutTimeGIF from "../assets/images/memes/its-about-time.gif";
-import ModernArtImage from "../assets/images/memes/modern-art.jpg";
 
 const QUESTIONS = [
     "What's your partner's first name?",
@@ -125,8 +123,8 @@ const DATASETS = [
                 <br />
                 <br />
                 Feel free to customise the letter to suit your needs. And
-                don&apos;t forget to give me proper credit when you use it.
-                Thanks!
+                don&apos;t forget to give me proper credit when you use this
+                project. Thanks!
             </>
         ),
     },
@@ -238,8 +236,8 @@ const DATASETS = [
                 <br />
                 <br />
                 Feel free to customise the letter to suit your needs. And
-                don&apos;t forget to give me proper credit when you use it.
-                Thanks!
+                don&apos;t forget to give me proper credit when you use this
+                project. Thanks!
             </>
         ),
     },

@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import "../css/chestOpening.css";
+import "../css/shiningScroll.css";
 
-const ChestOpening = ({ toRoute }) => {
+const ShiningScroll = ({ toRoute }) => {
     return (
         <div id="shining-item-container">
             <Link to={`${toRoute}`}>
@@ -25,12 +25,12 @@ const ChestOpening = ({ toRoute }) => {
     );
 };
 
-ChestOpening.propTypes = {
+ShiningScroll.propTypes = {
     toRoute: PropTypes.string,
 };
 
-ChestOpening.defaultProps = {
+ShiningScroll.defaultProps = {
     toRoute: "/letter",
 };
 
-export default ChestOpening;
+export default ShiningScroll;
