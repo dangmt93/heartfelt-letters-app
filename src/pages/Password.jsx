@@ -4,7 +4,7 @@ import StartButton from "../components/StartButton";
 import DotDotDotAnimation from "../components/DotDotDotAnimation";
 import ShiningScroll from "../components/ShiningScroll";
 import BackgroundFloating from "../components/BackgroundFloating";
-import { QUESTIONS, DATASETS } from "../data/data";
+import { QUESTIONS, ANSWER_DATASETS } from "../data/passwordData";
 import "../css/password.css";
 
 const Password = () => {
@@ -32,7 +32,7 @@ const Password = () => {
         setName(inputName);
 
         // Check in DATASETS and update dataset state
-        const dataset = DATASETS.find(
+        const dataset = ANSWER_DATASETS.find(
             (item) => item.inputName === inputName.toLowerCase()
         );
         if (dataset) {
@@ -99,7 +99,7 @@ const Password = () => {
                         <div
                             className="form-control"
                             style={{
-                                visibility: DATASETS.some(
+                                visibility: ANSWER_DATASETS.some(
                                     (item) =>
                                         item.inputName === name.toLowerCase()
                                 )

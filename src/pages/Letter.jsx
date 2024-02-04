@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../css/letter.css";
-import { DATASETS, FAKE_LETTER } from "../data/data";
+import { REAL_LETTERS, FAKE_LETTER } from "../data/letters";
 
 const Letter = () => {
     const [image, setImage] = useState("");
@@ -20,14 +20,14 @@ const Letter = () => {
         window.location.href = "/";
     }
 
-    const letterContent = () => {
+    const renderLetterContent = () => {
         const receiver = sessionStorage.getItem("receiver");
-        const dataset = DATASETS.find((item) => item.receiver === receiver);
-        if (dataset) {
-            return dataset.letterContent(handleTextTriggerOnClick);
+        const letterContent = REAL_LETTERS[receiver];
+        if (letterContent) {
+            return letterContent(handleTextTriggerOnClick);
         }
         return FAKE_LETTER(handleTextTriggerOnClick);
-    }
+    };
 
     return (
         <>
@@ -41,9 +41,7 @@ const Letter = () => {
             )}
 
             <div id="letter">
-                <div id="letter-body">
-                    {letterContent()}
-                </div>
+                <div id="letter-body">{renderLetterContent()}</div>
             </div>
         </>
     );
