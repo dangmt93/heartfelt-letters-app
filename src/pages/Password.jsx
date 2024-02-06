@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import CustomSelect from "../components/CustomSelect";
 import StartButton from "../components/StartButton";
 import DotDotDotAnimation from "../components/DotDotDotAnimation";
@@ -8,6 +9,9 @@ import { QUESTIONS, ANSWER_DATASETS } from "../data/passwordData";
 import "../css/password.css";
 
 const Password = () => {
+    // Hooks
+    const navigate = useNavigate();
+
     // States
     const [selectedData, setSelectedData] = useState(null); // store selected data object from dataset
     const [name, setName] = useState(""); // store name input
@@ -67,7 +71,7 @@ const Password = () => {
         } else {
             // If incorrect option is selected, direct to "fake" letter for imposters
             sessionStorage.setItem("receiver", "imposter"); // Save `receiver` as "imposter"
-            window.location.href = "/letter"; // Direct to `letter` page
+            navigate("/letter"); // Direct to `letter` page
         }
     };
 
