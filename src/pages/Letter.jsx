@@ -16,13 +16,13 @@ const Letter = () => {
     };
 
     // If sessionStorage is not set, redirect to main page
-    if (sessionStorage.getItem("receiver") === null) {
+    if (sessionStorage.getItem("recipient") === null) {
         window.location.href = "/";
     }
 
     const renderLetterContent = () => {
-        const receiver = sessionStorage.getItem("receiver");
-        const letterContent = REAL_LETTERS[receiver];
+        const recipient = sessionStorage.getItem("recipient");
+        const letterContent = REAL_LETTERS[recipient];
         if (letterContent) {
             return letterContent(handleTextTriggerOnClick);
         }

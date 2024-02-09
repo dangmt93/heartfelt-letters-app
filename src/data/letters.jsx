@@ -8,8 +8,8 @@ import ItsAboutTimeGIF from "../assets/images/memes/its-about-time.gif";
 
 /**
  * @desc Object containing real letter components.
- * For each letter component, the key is the receiver, and the value is the function that returns the letter component.
- * Update the key to match the receiver in ANSWER_DATASETS (in passwordData.js)
+ * For each letter component, the key is the recipient, and the value is the function that returns the letter component.
+ * Update the key to match the recipient in ANSWER_DATASETS (in passwordData.js)
  */
 export const REAL_LETTERS = {
     john: (handleTextTriggerOnClick) => (

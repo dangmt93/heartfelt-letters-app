@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import CustomSelect from "../components/CustomSelect";
 import StartButton from "../components/StartButton";
 import DotDotDotAnimation from "../components/DotDotDotAnimation";
@@ -66,11 +66,11 @@ const Password = () => {
         e.preventDefault();
         // If correct option is selected
         if (selectedData?.correctOption === selectedOption?.label) {
-            sessionStorage.setItem("receiver", selectedData.receiver); // Save `receiver` to session storage
+            sessionStorage.setItem("recipient", selectedData.recipient); // Save `recipient` to session storage
             setIsPasswordCorrect(true);
         } else {
             // If incorrect option is selected, direct to "fake" letter for imposters
-            sessionStorage.setItem("receiver", "imposter"); // Save `receiver` as "imposter"
+            sessionStorage.setItem("recipient", "imposter"); // Save `recipient` as "imposter"
             navigate("/letter"); // Direct to `letter` page
         }
     };

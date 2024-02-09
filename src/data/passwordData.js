@@ -20,7 +20,7 @@ export const QUESTIONS = [
 export const ANSWER_DATASETS = [
     {
         inputName: "emily",
-        receiver: "john",
+        recipient: "john",
         answerOptions: [
             {
                 value: "4-leaf Clover",
@@ -43,7 +43,7 @@ export const ANSWER_DATASETS = [
     },
     {
         inputName: "john",
-        receiver: "emily",
+        recipient: "emily",
         answerOptions: [
             {
                 value: "Scorpio Star Sign",
