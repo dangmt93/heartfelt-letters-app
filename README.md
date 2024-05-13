@@ -47,7 +47,7 @@ Here are the data used in the template:
   - Question 2: Scorpio Star Sign
 
 
-## ✨ Insipirations:
+## ✨ Inspirations
 - Background: https://codepen.io/Priler/pen/QpbyGd
   - all floating items are related to their stories, personalities, and hobbies.
 - Shining scroll: https://codepen.io/mgkOV/pen/qzNegg
