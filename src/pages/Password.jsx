@@ -36,15 +36,11 @@ const Password = () => {
         setName(inputName);
 
         // Check in DATASETS and update dataset state
-        const dataset = ANSWER_DATASETS.find(
-            (item) => item.inputName === inputName.toLowerCase()
-        );
+        const dataset = ANSWER_DATASETS.find((item) => item.inputName === inputName.toLowerCase());
         if (dataset) {
             setSelectedData(dataset);
             // Randomise the answer options
-            const randomisedOptions = [...dataset.answerOptions].sort(
-                () => Math.random() - 0.5
-            );
+            const randomisedOptions = [...dataset.answerOptions].sort(() => Math.random() - 0.5);
             setSelectedData({
                 ...dataset,
                 answerOptions: randomisedOptions,
@@ -92,28 +88,25 @@ const Password = () => {
                     <form onSubmit={onSubmit}>
                         <div className="form-control">
                             <h3>{QUESTIONS[0]}</h3>
-                            <input
-                                type="text"
-                                className="name-input"
-                                value={name}
-                                onChange={handleNameChange}
-                            />
+                            <span>
+                                Enter either &quot;{ANSWER_DATASETS[0].inputName}&quot; or &quot;
+                                {ANSWER_DATASETS[1].inputName}&quot; (removed when deployed)
+                            </span>
+                            <input type="text" className="name-input" value={name} onChange={handleNameChange} />
                         </div>
 
                         <div
                             className="form-control"
                             style={{
-                                visibility: ANSWER_DATASETS.some(
-                                    (item) =>
-                                        item.inputName === name.toLowerCase()
-                                )
+                                visibility: ANSWER_DATASETS.some((item) => item.inputName === name.toLowerCase())
                                     ? "visible"
                                     : "hidden",
                             }}
                         >
-                            <h3>{QUESTIONS[1]}</h3>- correct answer ={" "}
-                            {selectedData?.correctOption} (removed when
-                            deployed)
+                            <h3>{QUESTIONS[1]}</h3>
+                            <span>
+                                Correct answer is &quot;{selectedData?.correctOption}&quot; (removed when deployed)
+                            </span>
                             <CustomSelect
                                 dataArray={selectedData?.answerOptions}
                                 selectedItem={selectedOption}
