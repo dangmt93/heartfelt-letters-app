@@ -3,7 +3,7 @@
 [![demo](/to-you-demo.PNG)](https://dangmt93.github.io/heartfelt-letters-app/)
 
 ## 💡 Concept
-This project is all about a fun web application designed to deliver suprise and playful letters to couples, but you can adjust to send letters to as many people as you wish. The main goal? Giving your loved ones a special and personalised message from you.
+This project is all about a fun web application designed to deliver surprise and playful letters to couples, but you can adjust to send letters to as many people as you wish. The main goal? Giving your loved ones a special and personalised message from you.
 
 The inspiration for this project stemmed from a personal situation where I couldn't make it to my sister's wedding due to an unexpected personal circumstance. Being deeply connected to both her and her partner, I wanted to find a way to convey my love and support despite not being physically present for the celebration. Thus, the idea of creating a platform to send surprise letters emerged. The plan was to hit them up on the night before their big day, so they'd read their own special letters separately, thinking they were the only ones getting them. It adds a bit of mystery and excitement to the mix!
 
@@ -48,6 +48,6 @@ Here are the data used in the template:
 
 
 ## ✨ Insipirations:
-- Background: https://codepen.io/Priler/pen/QpbyGd?editors=1100
+- Background: https://codepen.io/Priler/pen/QpbyGd
   - all floating items are related to their stories, personalities, and hobbies.
-- Shining scroll: https://codepen.io/DMT93/pen/OJdEBGa?editors=1100
+- Shining scroll: https://codepen.io/mgkOV/pen/qzNegg
